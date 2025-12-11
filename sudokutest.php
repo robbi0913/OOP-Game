@@ -358,6 +358,9 @@ h1 {
     border: none;
     cursor: pointer;
     box-shadow: 0 4px 0 rgba(0,0,0,0.2);
+    transition: transform 0.2s ease-in,
+                box-shadow 0.2s ease-in,
+                background-color 0.2s ease-in;
 }
 
 .btn-primary {
@@ -618,7 +621,7 @@ table.sudoku input {
     </form>
 
     <div class="footer">
-        <button onclick="goBackHome()" class="btn btn-danger">Back to Menu</button>
+        <button onclick="goBackHome()" class="btn btn-danger">☰</button>
     </div>
 
 </div>
@@ -712,6 +715,7 @@ function handlePlayerMove(row, col, value) {
         
         document.getElementById('player1-display').textContent = player1Score;
         document.getElementById('player2-display').textContent = player2Score;
+
         document.getElementById('player1-btn').className = currentPlayer === 1 ? 'btn btn-primary' : 'btn';
         document.getElementById('player2-btn').className = currentPlayer === 2 ? 'btn btn-primary' : 'btn';
                                                                        // memento mori 'ACTIVE' : 'NOT ACTIVE'
