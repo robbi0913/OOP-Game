@@ -552,6 +552,14 @@ table.sudoku input {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
 }
 
+#info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 15px 0;
+}
+
+
 
 </style>
 </head>
@@ -561,6 +569,18 @@ table.sudoku input {
     <div class="help-icon" onclick="showInstructions()">?</div>
 
     <h1>Sudoku Clash</h1>
+
+<!-- 2p wowowowwow amazing, it's 2:56am -->
+<div id="info">
+    
+    <button id="player1-btn" class="btn btn-primary" style="min-width: 100px;">
+        Player 1<br><span id="player1-display">0</span> pts
+            </button>
+    <button id="player2-btn" class="btn" style="min-width: 100px;">
+        Player 2<br><span id="player2-display">0</span> pts
+            </button>
+    
+    </div>
 
     <div id="timer"
          data-start="<?php echo htmlspecialchars((string)$_SESSION['start_ms']); ?>"
@@ -654,6 +674,71 @@ function closeInstructions() {
     document.getElementById('instructions').classList.add('hidden');
     document.querySelector('.container').style.display = 'block';
 }
+
+// I HATE PHP IM GONNA DO IT IN JS INSTEAD FUAH
+
+let currentPlayer = 1; // dictates which player goes first
+
+// default scores
+let player1Score = 0;
+let player2Score = 0;
+
+// default owned cells
+let ownedCells = {};
+
+function handlePlayerMove(row, col, value) {
+    if (!value) return;
+    
+    const cellKey = row + '-' + col;
+    
+    // this cehcks if cell is already owned
+    if (!ownedCells[cellKey]) {
+        // marks cell as owned
+        ownedCells[cellKey] = currentPlayer;
+        
+        // adds points
+        if (currentPlayer === 1) {
+            player1Score += 10;
+        } else {
+            player2Score += 10;
+        }
+        
+        // colors the cell
+        const cellInput = document.querySelector(`input[name="cell_${row}_${col}"]`);
+        if (cellInput) {
+            const cell = cellInput.parentElement;
+            cell.classList.add(currentPlayer === 1 ? 'owner-1' : 'owner-2');
+        }
+        
+        document.getElementById('player1-display').textContent = player1Score;
+        document.getElementById('player2-display').textContent = player2Score;
+        document.getElementById('player1-btn').className = currentPlayer === 1 ? 'btn btn-primary' : 'btn';
+        document.getElementById('player2-btn').className = currentPlayer === 2 ? 'btn btn-primary' : 'btn';
+                                                                       // memento mori 'ACTIVE' : 'NOT ACTIVE'
+
+        // swithces turns
+        currentPlayer = currentPlayer === 1 ? 2 : 1;
+    }
+}
+
+// Attach event listeners when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    const inputs = document.querySelectorAll('table.sudoku input[type="text"]');
+    inputs.forEach(input => {
+        // Get row and column from input name
+        const match = input.name.match(/cell_(\d+)_(\d+)/);
+        if (match) {
+            const row = parseInt(match[1]);
+            const col = parseInt(match[2]);
+            
+            // Add event listener
+            input.addEventListener('change', function() {
+                handlePlayerMove(row, col, this.value);
+            });
+        }
+    });
+});
+
 </script>
 
 </body>
