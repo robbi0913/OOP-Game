@@ -483,6 +483,29 @@ table.sudoku input {
     transform: translateY(-2px);
 }
 
+.menu-icon {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    width: 35px;
+    height: 35px;
+    background: var(--orange);
+    color: white;
+    border-radius: 50%;
+    font-size: 22px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #CD7C2A;
+    transition: 0.2s;
+}
+
+.menu-icon:hover {
+    transform: translateY(-2px);
+}
+
 /*intructions screen*/
 .hidden {
     display: none;
@@ -558,11 +581,13 @@ table.sudoku input {
 #info {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 8vw;
     margin: 15px 0;
 }
 
-
+strong {
+    text-align: center;
+}
 
 </style>
 </head>
@@ -576,19 +601,20 @@ table.sudoku input {
 <!-- 2p wowowowwow amazing, it's 2:56am -->
 <div id="info">
     
-    <button id="player1-btn" class="btn btn-primary" style="min-width: 100px;">
+    <strong id="player1-btn" class="btn btn-primary" style="min-width: 100px;">
         Player 1<br><span id="player1-display">0</span> pts
-            </button>
-    <button id="player2-btn" class="btn" style="min-width: 100px;">
-        Player 2<br><span id="player2-display">0</span> pts
-            </button>
-    
-    </div>
+</strong>
 
     <div id="timer"
          data-start="<?php echo htmlspecialchars((string)$_SESSION['start_ms']); ?>"
          data-solved="<?php echo !empty($_SESSION['solved']) ? '1' : '0'; ?>">
       Time: 00:00
+    </div>
+
+    <strong id="player2-btn" class="btn" style="min-width: 100px;">
+        Player 2<br><span id="player2-display">0</span> pts
+    </strong>
+    
     </div>
 
     <form method="post">
@@ -621,7 +647,7 @@ table.sudoku input {
     </form>
 
     <div class="footer">
-        <button onclick="goBackHome()" class="btn btn-danger">☰</button>
+        <button onclick="goBackHome()" class="menu-icon">☰</button>
     </div>
 
 </div>
@@ -718,7 +744,7 @@ function handlePlayerMove(row, col, value) {
 
         document.getElementById('player1-btn').className = currentPlayer === 1 ? 'btn btn-primary' : 'btn';
         document.getElementById('player2-btn').className = currentPlayer === 2 ? 'btn btn-primary' : 'btn';
-                                                                       // memento mori 'ACTIVE' : 'NOT ACTIVE'
+                                                                     // memento mori 'ACTIVE' : 'NOT ACTIVE'
 
         // swithces turns
         currentPlayer = currentPlayer === 1 ? 2 : 1;
