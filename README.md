@@ -15,7 +15,7 @@ A.
         Server/Environment:
             1. Xampp - for local development server
 
-        Tools/Platformd:
+        Tools/Platforms:
             1. Figma - for UI design
             2. Git/GitHub - for repository
             3. VS Code - code editor
