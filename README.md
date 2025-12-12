@@ -8,20 +8,17 @@ A.
 2. Technology  Stack
     Programming Languages:
         1. PHP - 
-        2. HTML - 
-        3. CSS -
-        4. JavaScript -
-
-    Frameworks/Libraries:
-
+        2. HTML - for Frontend Structure 
+        3. CSS - for styling and layout
+        4. JavaScript - for frontend interactivity
 
     Server/Environment:
         1. Xampp - 
 
     Tools/Platformd:
-        1. Figma - 
-        2. Git/GitHub - 
-        3. VS Code - 
+        1. Figma - for UI design
+        2. Git/GitHub - for repository
+        3. VS Code - code editor
 
 3. Team Members and Contributions
     Jhunalyn Pegad - Frontend Developer, Backend Developer, UI/UX Designer
