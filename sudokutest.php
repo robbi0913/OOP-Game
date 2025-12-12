@@ -655,8 +655,6 @@ strong {
         </table>
     </form>
 
-
-
 </div>
 
 <div id="instructions" class="hidden screen">
