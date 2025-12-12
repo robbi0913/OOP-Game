@@ -268,10 +268,7 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     vertical-align: middle;
-    /* margin: 0 -18px;  */
-    margin-bottom: 0px;
-    margin-top: 0px;
-    margin-left: -22px;
-    margin-right:-18px;
+    margin: 0 -9px 5px -18px;
+
 }
 
