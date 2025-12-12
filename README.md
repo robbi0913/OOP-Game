@@ -1,0 +1,35 @@
+Github Repository
+A.
+1. Project Overview
+Game title: Sudoku Clash
+Brief description of the game concept: Sudoku Clash is an exciting multiplayer Sudoku game where two players compete to solve puzzles and earn points. Challenge your friends in this strategic number puzzle game that combines the classic Sudoku rules with competitive gameplay.
+Game objectives and win/lose conditions: Each correct move is +1 point. Each wrong move is -1 point. The player with the highest score when the board is completed wins.
+
+2. Technology  Stack
+
+3. Team Members and Contributions
+Jhunalyn Pegad - Frontend Developer, Backend Developer, UI/UX Designer
+Sophia Rainne Dumayas - Frontend Developer, UI/UX Designer
+Yujiro Fuji - Frontend Developer, Backend Developer (Core Game Mechanics)
+Dennice Lee - Frontend Developer, UI/UX Designer
+Robbi Perez - Frontend Developer, Backend Developer (2P Function)
+Sean Angelo A. Fariñas - Frontend Developer, Backend Developer
+
+4. How to Play
+Detailed game rules
+Goal: Type a number from 1 to 9 in the empty cells to complete the Sudoku grid (each number 1-9 appears once per row, column, and 3x3 box).
+Guarantee: All generated puzzles are solvable.
+
+Controls and instructions: 
+Input: Type 1-9 to fill empty cells.
+"Check" Button: Detects conflicts, but only checks cells that are currently filled.
+"New Game" / "Solve" Buttons: Start a new puzzle or reveal the solution.
+Top Left Icon (3 Dash): Menu
+Top Left Icon (Box): Full Screen
+Top Right Icon (Speaker): Sounds/Music
+Top Right Icon (Question Mark): How To Play/Instructions
+
+Game mechanics explanation: 
+Difficulty: The number of clues you set (e.g., 35) is only a target; the actual number of clues in the puzzle may vary.
+
+5. How to Run the Program
