@@ -7,13 +7,13 @@ A.
 
 2. Technology  Stack
     Programming Languages:
-        1. PHP - 
+        1. PHP - for backend processing and game logic
         2. HTML - for Frontend Structure 
         3. CSS - for styling and layout
         4. JavaScript - for frontend interactivity
 
     Server/Environment:
-        1. Xampp - 
+        1. Xampp - for local development server
 
     Tools/Platformd:
         1. Figma - for UI design
