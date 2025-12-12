@@ -583,6 +583,7 @@ table.sudoku input {
     justify-content: center;
     gap: 8vw;
     margin: 15px 0;
+    align-items: center;
 }
 
 strong {
@@ -596,12 +597,17 @@ strong {
 <div class="container">
     <div class="help-icon" onclick="showInstructions()">?</div>
 
+    <div class="footer">
+        <div onclick="goBackHome()" class="menu-icon">☰</div>
+    </div>
+
     <h1>Sudoku Clash</h1>
 
 <!-- 2p wowowowwow amazing, it's 2:56am -->
 <div id="info">
     
-    <strong id="player1-btn" class="btn btn-primary" style="min-width: 100px;">
+    <strong 
+        id="player1-btn" class="btn btn-primary" style="min-width: 100px;">
         Player 1<br><span id="player1-display">0</span> pts
 </strong>
 
@@ -611,7 +617,10 @@ strong {
       Time: 00:00
     </div>
 
-    <strong id="player2-btn" class="btn" style="min-width: 100px;">
+    <strong
+    id="player2-btn" class="btn" style="
+    min-width: 100px;
+    background-color: var(--orange);">
         Player 2<br><span id="player2-display">0</span> pts
     </strong>
     
@@ -646,9 +655,7 @@ strong {
         </table>
     </form>
 
-    <div class="footer">
-        <button onclick="goBackHome()" class="menu-icon">☰</button>
-    </div>
+
 
 </div>
 
