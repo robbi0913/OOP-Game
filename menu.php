@@ -23,7 +23,7 @@
 
         <div class="menu">
             <button onclick="startGame()" class="menu-button"> PLAY </button>
-            <button onclick="showScreen('options')" class="menu-button"> OPTIONS </button>
+            <!-- <button onclick="showScreen('options')" class="menu-button"> OPTIONS </button> -->
             <button onclick="showScreen('about')" class="menu-button"> ABOUT </button>
         </div>
     </div>

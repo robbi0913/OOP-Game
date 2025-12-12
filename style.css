@@ -264,10 +264,14 @@ body {
     display: inline-block;
     width: 3.5rem;        
     height: 3.5rem;
-    background-image: url('logo.png');
+    background-image: url('logo.png'); 
     background-size: contain;
     background-repeat: no-repeat;
     vertical-align: middle;
-    margin: 0 -18px;
+    /* margin: 0 -18px;  */
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: -22px;
+    margin-right:-18px;
 }
 

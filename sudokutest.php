@@ -747,11 +747,13 @@ function handlePlayerMove(row, col, value) {
         }
         
         document.getElementById('player1-display').textContent = player1Score;
+
+
         document.getElementById('player2-display').textContent = player2Score;
 
         document.getElementById('player1-btn').className = currentPlayer === 1 ? 'btn btn-primary' : 'btn';
         document.getElementById('player2-btn').className = currentPlayer === 2 ? 'btn btn-primary' : 'btn';
-                                                                     // memento mori 'ACTIVE' : 'NOT ACTIVE'
+                                        // memento mori 'ACTIVE' : 'NOT ACTIVE'
 
         // swithces turns
         currentPlayer = currentPlayer === 1 ? 2 : 1;
