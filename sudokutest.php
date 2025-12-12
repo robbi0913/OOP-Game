@@ -600,7 +600,6 @@ strong {
 <div class="container">
     <div class="help-icon" onclick="showInstructions()">?</div>
 
-    sound
     <div class="help-icon" onclick="toggleSound()"
     style="right: 70px;"
     >🕪</div>
