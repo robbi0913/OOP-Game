@@ -313,7 +313,7 @@ body {
     justify-content: center;
     align-items: center;
     color: var(--text-color);
-    min-height: 100vh;
+    min-height: 90vh;
 }
 
 .container {
@@ -594,12 +594,28 @@ strong {
 </head>
 
 <body>
+
+<audio id="bg-music" src="hope-cinematic-loop-273335.mp3" autoplay loop></audio>
+
 <div class="container">
     <div class="help-icon" onclick="showInstructions()">?</div>
 
-    <div class="footer">
-        <div onclick="goBackHome()" class="menu-icon">☰</div>
-    </div>
+    sound
+    <div class="help-icon" onclick="toggleSound()"
+    style="right: 70px;"
+    >🕪</div>
+    
+    <!-- fullscreen -->
+    <div class="help-icon" onclick="toggleFullscreen()"
+    style="left: 70px;"
+    >🗖</div>
+
+    
+
+<div class="footer">
+    <div onclick="goBackHome()" class="menu-icon">☰</div>
+    
+</div>
 
     <h1>Sudoku Clash</h1>
 
@@ -670,6 +686,17 @@ strong {
 
     <button onclick="closeInstructions()" class="back-button"> START </button>
 </div>
+
+<!-- this plays the music pls dont touch uwu -->
+<audio id="bg-music" autoplay loop>
+    <source src="bg-music.mp3" type="audio/mpeg">
+</audio>
+
+
+
+
+
+
 
 <!-- This is a timer, try to keep it as is. 
      It keeps breaking whenever I touch it. -->
@@ -746,7 +773,6 @@ function handlePlayerMove(row, col, value) {
         
         document.getElementById('player1-display').textContent = player1Score;
 
-
         document.getElementById('player2-display').textContent = player2Score;
 
         document.getElementById('player1-btn').className = currentPlayer === 1 ? 'btn btn-primary' : 'btn';
@@ -775,6 +801,34 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
+    }
+}
+
+// Auto-play the music when page loads
+window.onload = function() {
+    const music = document.getElementById('bg-music');
+    music.play().catch(e => {
+        console.log("Auto-play blocked by browser");
+        // User will need to click manually
+    });
+};
+
+function toggleSound() {
+    const music = document.getElementById('bg-music');
+    if (music.paused) {
+        music.play();
+    } else {
+        music.pause();
+    }
+}
 
 </script>
 
