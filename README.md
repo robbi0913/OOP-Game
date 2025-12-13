@@ -48,9 +48,9 @@ A.
     5. How to Run the Program
         Steps for Installation and Running:
         1. After installing the game, locate your XAMPP folder.
-        2. Insert the "whatever ung final name ng file" game file into the 'htdocs' folder located inside the XAMPP folder.
+        2. Insert the "OOP-Game" folder into the 'htdocs' folder located inside the XAMPP folder.
         3. Open XAMPP and start Apache.
-        4. Open your browser of choice and type 'http://localhost/whatever ung final name ng file.php'
+        4. Open your browser of choice and type 'http://localhost/OOP-Game/menu.php'
 
         Required Software and Dependencies:
         - PHP (https://www.php.net/downloads.php)
