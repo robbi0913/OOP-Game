@@ -2,55 +2,70 @@
 ?>
 
 <!DOCTYPE html>
+<html lang="en">
 <head> 
-    <html lang="en">
     <meta charset="UTF-8">
-    <title> Menu </title>
+    <title>Menu</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div id="homepage">
 
-            <div class="floating-tile tile1">1</div>
-            <div class="floating-tile tile2">2</div>
-            <div class="floating-tile tile3">4</div>
-            <div class="floating-tile tile4">7</div>
-            <div class="floating-tile tile5">5</div>
-            <div class="floating-tile tile6">9</div>
+        <div class="floating-tile tile1">1</div>
+        <div class="floating-tile tile2">2</div>
+        <div class="floating-tile tile3">4</div>
+        <div class="floating-tile tile4">7</div>
+        <div class="floating-tile tile5">5</div>
+        <div class="floating-tile tile6">9</div>
 
         <div class="title"> SUD <span class="logo-o"></span> KU CLASH </div>
 
-
         <div class="menu">
             <button onclick="startGame()" class="menu-button"> PLAY </button>
-            <!-- <button onclick="showScreen('options')" class="menu-button"> OPTIONS </button> -->
             <button onclick="showScreen('about')" class="menu-button"> ABOUT </button>
         </div>
     </div>
 
-    <div id="options" class="hidden screen">
+    <!-- ABOUT SECTION -->
+    <div id="about" class="hidden screen">
 
-        <div class="title"> OPTIONS </div>
+        <div class="about-logo"></div>
+        <div class="title"> ABOUT </div>
 
-        <div class="options-list">
-            <div class="option-row">
-                <div class="option-label"> GLOW COLOR </div>
-                <button class="option-button"></button>
+        <div class="about-container">
+            <div class="about-section">
+                <h2 class="about-heading">SUDOKU CLASH</h2>
+                <p class="about-description">
+                    Sudoku Clash is an exciting multiplayer Sudoku game where two players compete to solve puzzles and earn points. 
+                    Challenge your friends in this strategic number puzzle game that combines the classic Sudoku rules with competitive gameplay.
+                </p>
             </div>
-            
-            <div class="option-row">
-                <div class="option-label"> SOUND </div>
-                <button class="option-button sound"> </button>
+
+            <div class="about-section">
+                <h3 class="about-subheading">DEVELOPERS</h3>
+                <ul class="about-list">
+                    <li>Jhunalyn Pegad - Frontend Developer, Backend Developer, UI/UX Designer</li>
+                    <li>Sophia Rainne Dumayas - Frontend Developer, UI/UX Designer</li>
+                    <li>Yujiro Fuji - Frontend Developer, Backend Developer (Core Game Mechanics)</li>
+                    <li>Dennice Lee - Frontend Developer, UI/UX Designer</li>
+                    <li>Robbi Perez - Frontend Developer, Backend Developer (2P Function)</li>
+                    <li>Sean Angelo A. Fariñas - Frontend Developer, Backend Developer</li>
+                </ul>
             </div>
-            
-            <div class="option-row">
-                <div class="option-label"> FULLSCREEN </div>
-                <button class="option-button fullscreen"></button>
+
+            <div class="about-section">
+                <h3 class="about-subheading">INSTRUCTOR</h3>
+                <p class="about-text">Mr. Dowelle Dayle Mon</p>
+            </div>
+
+            <div class="about-section">
+                <h3 class="about-subheading">BACKGROUND MUSIC</h3>
+                <p class="about-text">Hope by IdoBerg</p>
             </div>
         </div>
 
         <button onclick="goBackHome()" class="back-button"> Back </button>
-
     </div>
 
 </body>
@@ -62,6 +77,7 @@
 
     function showScreen(screenId) {
         document.getElementById("homepage").style.display = "none";
+
         document.querySelectorAll(".screen").forEach(div => {
             div.style.display = "none";
         });
@@ -73,11 +89,18 @@
         document.querySelectorAll(".screen").forEach(div => {
             div.style.display = "none";
         });
+
         document.getElementById("homepage").style.display = "block";
     }
 
-    
+    /* Forces homepage to ALWAYS load first */
+    window.onload = function() {
+        document.querySelectorAll(".screen").forEach(div => {
+            div.style.display = "none";
+        });
+        document.getElementById("homepage").style.display = "block";
+        window.scrollTo(0, 0);
+    };
 </script>
-
 
 </html>
