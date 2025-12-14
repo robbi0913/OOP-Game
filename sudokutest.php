@@ -291,7 +291,7 @@ $conflicts = $_SESSION['conflicts'];
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>(Cool name) Sudoku</title>
+<title>Sudoku Clash</title>
 <style>
 :root {
     --cream: #FFFBCD;
