@@ -688,11 +688,8 @@ strong {
 
 <!-- this plays the music pls dont touch uwu -->
 <audio id="bg-music" autoplay loop>
-    <source src="bg-music.mp3" type="audio/mpeg">
+    <source src="asset/bg-music.mp3" type="audio/mpeg">
 </audio>
-
-
-
 
 
 
